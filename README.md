@@ -82,6 +82,26 @@ products-srp-demo/
 - HTTP 422 (erro de validação)
 - Mensagem: "Preço deve ser maior ou igual a zero"
 
+## Arquitetura e SRP
+
+### Separação de Responsabilidades
+
+1. **ProductValidator** (Domain)
+   - Responsabilidade: Validar dados de entrada
+   - Não conhece persistência ou apresentação
+
+2. **FileProductRepository** (Infra)
+   - Responsabilidade: Persistir e recuperar dados
+   - Única classe que acessa o arquivo
+
+3. **ProductService** (Application)
+   - Responsabilidade: Orquestrar operações de negócio
+   - Não contém lógica de validação ou persistência
+
+4. **Páginas Públicas**
+   - Responsabilidade: Apresentação e captura de dados
+   - Não contém regras de negócio
+
 
 ## Tecnologias
 
@@ -90,3 +110,6 @@ products-srp-demo/
 - PSR-4 Autoloading
 - JSON para persistência
 
+# Participantes
+- Carlos mMllo: 1988692
+- George Lucas: 2012100
