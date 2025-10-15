@@ -1,0 +1,17 @@
+{
+    "name": "products-srp-demo/products-system",
+    "description": "Sistema de cadastro e listagem de produtos aplicando SRP",
+    "type": "project",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "ProductsSrpDemo\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}
+
